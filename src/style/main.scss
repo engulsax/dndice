@@ -1,0 +1,63 @@
+@import "theme";
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+/*---- screen size ----*/
+#app {
+  width: auto;
+  margin: 0 auto;
+}
+
+/*---- text & font ----*/
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Secular One', sans-serif;
+  background-color: var(--app-background-color);
+}
+
+.font {
+  color: var(--text-primary-color);
+  font-variant-numeric: tabular-nums; 
+  &.tiny{
+    font-size: 0.8rem;
+  }
+  &.small {
+    font-size: 1rem;
+  }
+
+  &.medium {
+    font-size: 1.3rem;
+  }
+
+  &.big {
+    font-size: 2.5rem;
+  }
+
+  &.xbig {
+    font-size: 3rem;
+  }
+  &.secondary {
+    color: var(--text-secondary-color);
+  }
+}
+
+/* --- scrollbar --- */ 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--app-background-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary-color);
+}

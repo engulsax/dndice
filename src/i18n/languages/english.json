@@ -1,0 +1,29 @@
+{
+  "views": {
+    "start": {
+      "active": "Active",
+      "new": "New",
+      "find-active": "Find active epick",
+      "your-active": "Your active epicks",
+      "find": "Find",
+      "enter-code": "Enter code",
+      "create-new": "Create New",
+      "deciding-on": "What are you deciding on today?"
+    },
+    "create": {
+      "enter-location": "Enter location",
+      "choose-location": "Select a location",
+      "create-epick": "Create an epick",
+      "pick-name": "Pick a name",
+      "adventures": "Adventures",
+      "activites": "Activites",
+      "sports": "Sports",
+      "restaurants": "Restaurants",
+      "next": "Next",
+      "back": "Back",
+      "finish": "Finish",
+      "generate": "Generate suggestions",
+      "invite-or-solo": "Invite friends or contine solo"
+    }    
+  }
+}

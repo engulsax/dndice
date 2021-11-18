@@ -1,0 +1,21 @@
+:root {
+    --app-background-color: #FF5E5E;
+    --app-background-color-secondary: #535353;
+    --text-primary-color: white;
+    --die-color: white;
+    --text-secondary-color: #535353;
+    --selected-color :#313131;
+    --unselected-color: #8B8B8B;
+    --counter-color :#FF7D7D;
+}
+
+[theme="dark"] {
+    --app-background-color: #FF5E5E;
+    --app-background-color-secondary: #535353;
+    --text-primary-color: white;
+    --die-color: white;
+    --text-secondary-color: #535353;
+    --counter-color :#FF7D7D;
+    --selected-color :#313131;
+    --unselected-color: #8B8B8B;
+}
