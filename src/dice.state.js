@@ -5,45 +5,42 @@ const diceState = {
 	dieArray: [],
 	dices: [
 		{
+			text: 'd%',
+			src: 'dp',
+			dieNum: 'p',
+		},
+		{
 			text: 'd2',
-			pos: 'first',
 			dieNum: 2,
 		},
 		{
 			text: 'd4',
-			pos: '',
 			dieNum: 4,
 		},
 		{
 			text: 'd6',
-			pos: '',
 			dieNum: 6,
 		},
 		{
 			text: 'd8',
-			pos: '',
 			dieNum: 8,
 		},
 		{
 			text: 'd10',
-			pos: '',
 			dieNum: 10,
 		},
 		{
 			text: 'd12',
-			pos: '',
 			dieNum: 12,
 		},
 		{
 			text: 'd20',
-			pos: '',
 			dieNum: 20,
 		},
-		{
-			text: 'd100',
-			pos: 'last',
-			dieNum: 100,
-		}
+		// {
+		// 	text: 'd100',
+		// 	dieNum: 100,
+		// }
 	]
 }
 
@@ -57,17 +54,42 @@ export function decreaseDice() {
 }
 
 export function rollDice() {
+	if(diceState.dices[diceState.selectedDie].dieNum === 'p') {
+		diceState.dieArray = Array.from({length: diceState.amountOfDice}, () => Math.ceil(Math.random() * 100));
+		console.log(diceState.dieArray)
+	} else {
+		diceState.dieArray = Array.from({length: diceState.amountOfDice}, () => Math.ceil(Math.random() * diceState.dices[diceState.selectedDie].dieNum));
+	}
 	// randomly generated N = amountOfDice length array 0 <= A[N] <= selectedDie
-	diceState.dieArray = Array.from({length: diceState.amountOfDice}, () => Math.ceil(Math.random() * diceState.dices[diceState.selectedDie].dieNum));
-	diceState.dieSum = 0;
-	diceState.dieArray.forEach((die) => {diceState.dieSum += die})
+	diceState.dieSum = '???';
+
+	setTimeout(() => {
+		diceState.dieSum = 0;
+		diceState.dieArray.forEach((die) => {diceState.dieSum += die})
+	}, 1000)
 
 	this.diceTextId = `td${diceState.dices[diceState.selectedDie].dieNum}`;
-    const elms = document.querySelectorAll(`[data-name=${this.diceTextId}]`);
+	const elmsDie = document.querySelectorAll('[data-name=diesvg]');
+
+	elmsDie.forEach((el) => {
+		el.classList.add('rolling-die');
+		i+=1;
+		setTimeout(() => {
+			el.classList.remove('rolling-die');
+		}, 1000)
+	})
+
+    const elmsTxt = document.querySelectorAll(`[data-name=${this.diceTextId}]`);
 
     let i = 0;
-    elms.forEach((el) => {
-      el.textContent = diceState.dieArray[i];
+    elmsTxt.forEach((el) => {
+		el.classList.add('rolling-die');
+		el.textContent = 'N'
+		let a = i;
+		setTimeout(() => {
+			el.textContent = diceState.dieArray[a];
+			el.classList.remove('rolling-die');
+		}, 1000)
       i+=1;
     })
 }

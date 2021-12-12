@@ -1,5 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1264 1263">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 1264 1263">
+  <defs>
+    <filter id="_12" x="118.5" y="347" filterUnits="userSpaceOnUse">
+      <feOffset dx="25" dy="13" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-color="#2b2b2b"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
   <rect id="Rectangle_30" data-name="Rectangle 30" width="1264" height="1263" rx="130" fill="#535353"/>
-  <path id="Polygon_35" data-name="Polygon 35" d="M483.5,0,967,876H0Z" transform="translate(148.261 193.471)" fill="#fff"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="_4" data-name="td4" fill="#535353" font-size="467" font-family="Impact"><tspan x="-206.137" y="0"></tspan></text>
+  <g  data-name="diesvg" transform="translate(78.965 88.706)" fill="#2b2b2b">
+    <path d="M 1028.472045898438 946.029296875 L 46.59756088256836 946.029296875 L 537.5347900390625 56.89290237426758 L 1028.472045898438 946.029296875 Z" stroke="none"/>
+    <path d="M 537.5347900390625 113.785888671875 L 93.1951904296875 918.5292358398438 L 981.8743896484375 918.5292358398438 L 537.5347900390625 113.785888671875 M 537.5347900390625 6.103515625e-05 L 1075.069580078125 973.5292358398438 L 0 973.5292358398438 L 537.5347900390625 6.103515625e-05 Z" stroke="none" fill="#ff5e5e"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_12)">
+     <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="_4" data-name="td4" fill="#fff" font-size="467" font-family="Impact"><tspan x="-206.137" y="0"></tspan></text>
+  </g>
 </svg>

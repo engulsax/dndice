@@ -9,7 +9,7 @@
     >
       <DynamicIcon
         class="dice-image"
-        :icon="`${d.text}-icon`"
+        :icon="`${getIconSrc(d)}-icon`"
       />
       <p class="font tiny">
         {{ d.text }}
@@ -35,6 +35,9 @@ export default {
         };
     },
     methods: {
+      getIconSrc(d){
+        return d?.src || d.text;
+      },
       selectedDie(die){
         resetDie();
         diceState.selectedDie = die;
@@ -48,21 +51,15 @@ export default {
     display: flex;
     background-color: var(--app-background-color-secondary);
     justify-content: center;
-    gap: 0.2rem;
-    padding: 2rem;
-    .first{
-        border-radius: .5rem  0 0 .5rem;
-    }
-    .last{
-         border-radius: 0 .5rem .5rem 0;
-    }
+    gap: 0.5rem;
+    padding: 1rem;
     .dice{
         display: flex;
         justify-content: end;
         flex-direction: column;
         background-color: var(--unselected-color);
         min-width: 2rem;
-        width: 2.4rem;
+         border-radius: .5rem;
         &:hover{
             cursor: pointer;
         }

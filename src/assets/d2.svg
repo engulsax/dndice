@@ -1,5 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1264 1263">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1264 1263">
+  <defs>
+    <filter id="_12" x="157.261" y="347" width="1021" height="583" filterUnits="userSpaceOnUse">
+      <feOffset dx="25" dy="13" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-color="#2b2b2b"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
   <rect id="Rectangle_27" data-name="Rectangle 27" width="1264" height="1263" rx="130" fill="#535353"/>
-  <circle id="Ellipse_2" data-name="Ellipse 2" cx="486.75" cy="486.75" r="486.75" transform="translate(157.25 144.75)" fill="#fff"/>
- <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="_2" data-name="td2" fill="#535353" font-size="467" font-family="Impact"><tspan x="-206.137" y="0"></tspan></text>
+  <g data-name="diesvg" transform="translate(157.25 144.75)" fill="#2b2b2b" stroke="#ff5e5e" stroke-width="55">
+    <circle cx="486.75" cy="486.75" r="486.75" stroke="none"/>
+    <circle cx="486.75" cy="486.75" r="459.25" fill="none"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_12)">
+     <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="_2" data-name="td2" fill="#fff" font-size="467" font-family="Impact"><tspan x="-206.137" y="0"></tspan></text>
+  </g>
 </svg>

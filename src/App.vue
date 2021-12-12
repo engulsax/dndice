@@ -31,7 +31,7 @@ import diceSelector from "./components/dice.selector.vue";
 import diceCounter from "./components/dice.counter.vue";
 import dice from "./components/dice.vue";
 import bbutton from "./components/button.vue";
-import diceState, { dieSum, rollDice } from "./dice.state";
+import diceState, { rollDice } from "./dice.state";
 
 export default {
   name: "App",
@@ -44,7 +44,6 @@ export default {
   data() {
     return {
       diceState,
-      dieSum,
       diceContainerHeigth: 200,
       rollDice,
     };

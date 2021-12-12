@@ -1,6 +1,9 @@
 <template>
   <div class="counter">
-    <div @click="minus()">
+    <div
+      class="left"
+      @click="minus()"
+    >
       <DynamicIcon
         class="icon"
         icon="minus"
@@ -11,7 +14,10 @@
         {{ diceState.amountOfDice }}
       </p>
     </div>
-    <div @click="plus()">
+    <div
+      class="right"
+      @click="plus()"
+    >
       <DynamicIcon
         class="icon"
         icon="plus"
@@ -44,14 +50,23 @@ export default {
 .counter{
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.2rem;
     padding: 1rem;
     div{
         display: flex;
         padding: 0 0.3rem;
-        width: 2.5rem;
+        width: 2.2rem;
         height: 3.5rem;
+        border-radius: 0.1rem;
         background-color: var(--counter-color);
+        &.left{
+        width: 2rem;
+        border-radius: 5rem  0.1rem 0.1rem 5rem;
+        }
+        &.right{
+         width: 2rem;
+        border-radius: 0.1rem 5rem 5rem 0.1rem;
+        }
         &:hover{
             cursor: pointer;
         }

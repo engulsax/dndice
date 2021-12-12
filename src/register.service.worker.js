@@ -3,6 +3,7 @@
 import { register } from 'register-service-worker';
 
 console.log(process.env);
+// eslint-disable-next-line no-constant-condition
 if (process.env.NODE_ENV === 'production') {
   register(`${process.env.BASE_URL}service-worker.js`, {
     ready() {
