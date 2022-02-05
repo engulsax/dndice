@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "xyz.dndice.twa",
+                     "sha256_cert_fingerprints": ["1E:11:2C:B7:F6:AC:1E:F0:95:58:1F:7A:8C:D1:83:C8:95:5D:F0:B7:E2:94:C3:EA:C8:00:18:DA:E4:5D:70:08"] }
+      }
+]
